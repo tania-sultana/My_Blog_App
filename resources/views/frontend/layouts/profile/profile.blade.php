@@ -47,6 +47,7 @@
 
                                                 <img src="{{ asset('storage') . '/' . $userData->image }}" alt="Admin"
                                                     class="rounded-circle p-1 bg-primary" width="110">
+                                                    <input type="file" name="image" class="form-control">
                                                 <div class="mt-3">
                                                     <h4>{{ $userData->name }}</h4>
                                                     <p class="text-secondary mb-1"> </p>

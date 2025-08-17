@@ -7,6 +7,7 @@
                 <div class="row g-0">
                     <div class="col-lg-5 border-end">
                         <form action="{{route('update.password')}}" method="post">
+                            @csrf
                             <div class="card-body">
                             <div class="p-5">
                                 <div class="text-start">
@@ -22,11 +23,11 @@
                                 </div>
                                 <div class="mb-3 mt-5">
                                     <label class="form-label">New Password</label>
-                                    <input type="password" name="password" class="form-control" placeholder="Enter new password" />
+                                    <input type="password" name="new_password" class="form-control" placeholder="Enter new password" />
                                 </div>
                                 <div class="mb-3">
                                     <label class="form-label">Confirm Password</label>
-                                    <input type="password" name="confirm-password" class="form-control" placeholder="Confirm password" />
+                                    <input type="password" name="confirm_password" class="form-control" placeholder="Confirm password" />
                                 </div>
                                 <div class="d-grid gap-2">
                                     <button type="submit" class="btn btn-primary">Change Password</button> <a

@@ -368,10 +368,10 @@
                     <li><a class="dropdown-item" href="{{route('profile.edit')}}"><i
                                 class="bx bx-user"></i><span>Profile</span></a>
                     </li>
-                    <li><a class="dropdown-item" href="{{route('password.change')}}:;"><i
-                                class="bx bx-cog"></i><span>password</span></a>
+                    <li><a class="dropdown-item" href="{{route('password.change')}}"><i
+                                class="bx bx-cog"></i><span>Password</span></a>
                     </li>
-                    <li><a class="dropdown-item" href="javascript:;"><i
+                    <li><a class="dropdown-item" href="{{route('dashboard')}}"><i
                                 class='bx bx-home-circle'></i><span>Dashboard</span></a>
                     </li>
                     <li><a class="dropdown-item" href="javascript:;"><i

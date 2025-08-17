@@ -24,6 +24,7 @@
     <link rel="stylesheet" href="{{ asset('backend/assets') }}/css/semi-dark.css" />
     <link rel="stylesheet" href="{{ asset('backend/assets') }}/css/header-colors.css" />
     <title>Rukada - Responsive Bootstrap 5 Admin Template</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css">
 </head>
 
 <body>
@@ -72,6 +73,28 @@
     <script src="{{ asset('backend/assets') }}/js/index.js"></script>
     <!--app JS-->
     <script src="{{ asset('backend/assets') }}/js/app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+    <script>
+        @if (Session::has('message'))
+        var type = "{{Session::get('alert-type','info')}}"
+        switch(type)
+        {
+            case 'info':
+                toastr.info("{{Session::get('message')}}");
+                break;
+            case 'success':
+                toastr.success("{{Session::get('message')}}");
+                break;
+            case 'warning':
+                toastr.warning("{{Session::get('message')}}");
+                break;
+            case 'error':
+                toastr.error("{{Session::get('message')}}");
+                break;
+        }
+
+        @endif
+    </script>
 </body>
 
 </html>
